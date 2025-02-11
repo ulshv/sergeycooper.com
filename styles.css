@@ -108,11 +108,17 @@ body::before {
   font-size: 50px;
   font-weight: bold;
   padding-bottom: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.content-container {
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .content {
-  font-size: 20px;
-  line-height: 1.5;
+  max-width: 800px;
 }
 
 .code {
@@ -123,4 +129,36 @@ body::before {
 
 a {
   color: #2e98fa;
+}
+
+/* Tweaked version of https://www.sitepoint.com/css-typewriter-effect */
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from { border-color: transparent }
+  to { border-color: orange; }
+}
+
+@keyframes stopCursor {
+  to   { border: none; }
+}
+
+.typewriter-container {
+  display: inline-block;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid rgb(0,0,0);
+  white-space: nowrap;
+  width: 0;
+  animation:
+    typing 1s steps(15, end) forwards,
+    blink .8s infinite,
+    stopCursor 0s 4.5s forwards;
 }
