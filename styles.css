@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow: scroll;
+}
+
+@property --color-r {
+  syntax: '<number>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --color-g {
+  syntax: '<number>';
+  initial-value: 100;
+  inherits: false;
+}
+
+@property --color-b {
+  syntax: '<number>';
+  initial-value: 0;
+  inherits: false;
+}
+
+body::before {
+  --bg-gradient-color-2: #000000;
+
+  content: '';
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(142deg, rgb(var(--color-r), var(--color-g), var(--color-b)) 30%, var(--bg-gradient-color-2) 60%);
+  animation: rotateGradient 10s linear infinite,
+             colorCycle 10s linear infinite;
+  z-index: -1;
+  transform-origin: center center;
+}
+
+@keyframes rotateGradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colorCycle {
+  0%, 100% {
+    --color-r: 30;
+    --color-g: 30;
+    --color-b: 80;
+  }
+  14.25% {
+    --color-r: 30;
+    --color-g: 80;
+    --color-b: 80;
+  }
+  28.5% {
+    --color-r: 30;
+    --color-g: 80;
+    --color-b: 30;
+  }
+  42.75% {
+    --color-r: 30;
+    --color-g: 80;
+    --color-b: 30;
+  }
+  57% {
+    --color-r: 80;
+    --color-g: 80;
+    --color-b: 30;
+  }
+  71.25% {
+    --color-r: 80;
+    --color-g: 30;
+    --color-b: 30;
+  }
+  85.5% {
+    --color-r: 80;
+    --color-g: 30;
+    --color-b: 80;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.inner-container {
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.content {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.code {
+  font-size: 20px;
+  font-family: monospace;
+  color: #2e98fa;
+}
+
+a {
+  color: #2e98fa;
+}

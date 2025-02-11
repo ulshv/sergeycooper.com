@@ -4,76 +4,9 @@
     <head>
         <title>Sergey Cooper</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-          * {
-            box-sizing: border-box;
-            font-family: sans-serif;
-            color: #fff;
-          }
-
-          body {
-            margin: 0;
-            min-height: 100vh;
-            position: relative;
-            overflow: scroll;
-          }
-
-          body::before {
-            content: '';
-            position: fixed;
-            top: -100%;
-            left: -100%;
-            width: 300%;
-            height: 300%;
-            background: linear-gradient(142deg, rgb(20 65 157) 0%, rgb(0 5 7) 50%, rgb(145 17 17) 100%);
-            animation: rotateGradient 12s linear infinite;
-            z-index: -1;
-            transform-origin: center center;
-          }
-
-          @keyframes rotateGradient {
-            0% {
-              transform: rotate(0deg);
-            }
-            100% {
-              transform: rotate(360deg);
-            }
-          }
-
-          .container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            min-height: 100vh;
-          }
-
-          .inner-container {
-            margin: auto;
-            padding: 60px 20px;
-          }
-
-          .title {
-            font-size: 50px;
-            font-weight: bold;
-            padding-bottom: 20px;
-          }
-
-          .content {
-            font-size: 20px;
-            line-height: 1.5;
-          }
-
-          .code {
-            font-size: 20px;
-            font-family: monospace;
-            color: #2e98fa;
-          }
-
-          a {
-            color: #2e98fa;
-          }
-        </style>
+        <link rel="stylesheet" href="./styles.css">
     </head>
+
     <body>
       <div class="container">
         <div class="inner-container">
