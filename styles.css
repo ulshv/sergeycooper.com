@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #fff;
 }
 
@@ -43,11 +43,14 @@ body {
 }
 
 .code {
-  font-family: monospace;
-  color: #2e98fa;
+  font-family: 'Fira Code', monospace;
 }
 
 a {
+  color: #2e98fa;
+}
+
+.blue-text {
   color: #2e98fa;
 }
 
