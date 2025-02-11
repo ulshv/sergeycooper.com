@@ -39,7 +39,7 @@ body {
 }
 
 .content {
-  max-width: 800px;
+  max-width: 768px;
 }
 
 .code {
@@ -51,7 +51,11 @@ a {
   color: #2e98fa;
 }
 
-@media screen and (max-width: 768px) {
+.list {
+  margin-top: 8px;
+}
+
+/* @media screen and (max-width: 768px) {
   .title {
     font-size: 40px;
   }
@@ -59,7 +63,7 @@ a {
   .content-container {
     font-size: 18px;
   }
-}
+} */
 
 /* Animated gradient background */
 
