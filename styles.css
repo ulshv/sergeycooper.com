@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
   color: #fff;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 .code {
-  font-family: 'Fira Code', monospace;
+  font-family: monospace;
 }
 
 a {
