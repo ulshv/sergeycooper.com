@@ -109,7 +109,9 @@ body::before {
   font-weight: bold;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  padding: 5px;
+  padding: 5px 0;
+  /* max-width: calc(100vw - 40px);
+  overflow: hidden; */
 }
 
 .content-container {
